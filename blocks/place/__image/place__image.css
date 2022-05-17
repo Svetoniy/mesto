@@ -1,0 +1,8 @@
+.place__image{
+  width: 100%;
+  padding-top: 100%;
+  background-image: url(/images/place/kirill-pershin-1088404-unsplash.jpg);
+  background-size: contain;
+  background-position: center;
+
+}

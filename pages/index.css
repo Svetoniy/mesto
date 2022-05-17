@@ -1,0 +1,21 @@
+@import url(/vendor/normalize.css);
+@import url(/vendor/fonts.css);
+@import url(/blocks/root/root.css);
+@import url(/blocks/page/page.css);
+@import url(/blocks/header/header.css);
+@import url(/blocks/header/__logo/header__logo.css);
+@import url(/blocks/content/);
+@import url(/blocks/profile/profile.css);
+@import url(/blocks/profile/__info-block/profile__info-block.css);
+@import url(/blocks/profile/__avatar/profile__avatar.css);
+@import url(/blocks/profile/__title/profile__title.css);
+@import url(/blocks/profile/__subtitle/profile__subtitle.css);
+
+@import url(/blocks/places/places.css);
+
+@import url(/blocks/place/place.css);
+@import url(/blocks/place/__image/place__image.css);
+
+
+
+*{border: 1px red solid;}
