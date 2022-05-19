@@ -11,10 +11,6 @@
   -moz-text-size-adjust: 100%;
   text-rendering:optimizeLegibility;
 
-  background-image: url(/images/MAIN\ PAGE.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 1217px;
+  min-height: 1280px;
 
 }
