@@ -14,27 +14,40 @@
 
     <main class="content">
       <section class="profile">
-
-          <img class="profile__avatar" src="/images/profile/image.jpg"></img>
-          <div class="profile__info">
-            <div class="profile__name">
-              <h1 class="profile__title">Жак-Ив Кусто</h1>
-              <button class="profile__edit-button"><img src="/images/profile/edit.svg" alt="редактировать" class="profile__edit-button-img"></button>
-            </div>
-            <div class="profile__subtitle">Исследователь океана</div>
+        <img class="profile__avatar" src="/images/profile/image.jpg"></img>
+        <div class="profile__info">
+          <div class="profile__name">
+            <h1 class="profile__title">Жак-Ив Кусто</h1>
+            <button class="profile__edit-button"></button>
           </div>
-
+          <h2 class="profile__subtitle">Исследователь океана</h2>
+        </div>
         <button class="profile__add-button"></button>
       </section>
 
-      <section class="places">
-        <div class="place">
-          <div class="place__image"></div>
-          <div class="place__group">
-            <div class="place__name">Карачаевск</div>
-            <div class="place__like__button"></div>
-          </div>
+      <section class="popup">
+        <button class="popup__exit"></button>
+        <div class="popup__main">
+          <h2 class="popup__title">Редактировать профиль</h2>
+          <form class="popup__form">
+            <input type="text" class="popup__name">
+            <input type="text" class="popup__subtitle">
+            <button class="popup__save-button">Сохранить</button>
+          </form>
         </div>
+      </section>
+
+      <section class="places">
+
+          <div class="place">
+            <img class="place__image" src="./images/place/kirill-pershin-1088404-unsplash.jpg" alt="Красоты карачевска"></img>
+            <div class="place__group">
+              <h2 class="place__name">Карачаевск</h2>
+              <button class="place__like-button"></button>
+            </div>
+          </div>
+
+
       </section>
     </main>
 

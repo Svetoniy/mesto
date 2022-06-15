@@ -1,0 +1,9 @@
+.popup{
+  display: none;
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin:195px 425px 0;
+}

@@ -1,0 +1,9 @@
+.popup__exit{
+  background-image: url(../../../images/popup/Close\ Icon.svg);
+  width: 32px;
+  height: 32px;
+  margin: 0 -40px 8px 0;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
