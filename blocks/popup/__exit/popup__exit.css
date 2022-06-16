@@ -2,8 +2,16 @@
   background-image: url(../../../images/popup/Close\ Icon.svg);
   width: 32px;
   height: 32px;
-  margin: 0 -40px 8px 0;
-  cursor: pointer;
   border: none;
   background-color: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin:-40px -40px 0;
+}
+
+@media screen and (max-width: 361px) {
+  .popup__exit {
+    margin:-40px 0 0;
+  }
 }

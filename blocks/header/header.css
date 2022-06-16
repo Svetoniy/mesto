@@ -5,3 +5,11 @@
   display: flex;
   padding-top: 45px;
 }
+
+@media screen and (max-width: 361px) {
+  .header {
+    width: 100%;
+    margin:0;
+    padding-top: 28px
+  }
+}
