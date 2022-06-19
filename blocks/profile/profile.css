@@ -10,6 +10,6 @@
   .profile {
     flex-direction: column;
     justify-content: center;
-    margin: 42px auto 0
+    margin: 42px auto 0;
   }
 }
