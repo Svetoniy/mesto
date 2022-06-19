@@ -10,7 +10,7 @@
   margin:-40px -40px 0;
 }
 
-@media screen and (max-width: 361px) {
+@media screen and (max-width: 550px) {
   .popup__exit {
     margin:-40px 0 0;
   }

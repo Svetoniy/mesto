@@ -1,5 +1,5 @@
 .popup__main{
-  min-width: 430px;
+  max-width: 430px;
   display: flex;
   flex-direction: column;
   background-color: #fff;
@@ -9,9 +9,9 @@
   position: relative;
 }
 
-@media screen and (max-width: 321px) {
+@media screen and (max-width: 550px) {
   .popup__main {
-    min-width: 282px;
+    max-width: 282px;
     padding: 25px 22px;
   }
 }
