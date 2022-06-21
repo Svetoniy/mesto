@@ -4,8 +4,8 @@ const popupForm = document.querySelector('.popup__form')
 const popup = document.querySelector('.popup');
 const profileName = document.querySelector('.profile__title');
 const profileSubtitle = document.querySelector('.profile__subtitle');
-const popupName = document.querySelector('.popup_input-name');
-const popupSubtitle = document.querySelector('.popup_input-subtitle');
+const popupName = document.querySelector('.popup_input_name');
+const popupSubtitle = document.querySelector('.popup_input_subtitle');
 const likeButton = document.querySelector('.button_type_like')
 
 function openedPopup() {
