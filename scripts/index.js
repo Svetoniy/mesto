@@ -1,35 +1,30 @@
-const editButton=document.querySelector('.profile__edit-button');
-const exitButton=document.querySelector('.popup__exit');
-const popupForm=document.querySelector('.popup__form')
-const popup=document.querySelector('.popup');
-const profileName=document.querySelector('.profile__title');
-const profileSubtitle=document.querySelector('.profile__subtitle');
-const popupName=document.querySelector('.popup__name');
-const popupSubtitle=document.querySelector('.popup__subtitle');
-const likeButton=document.querySelector('.place__like-button')
+const editButton = document.querySelector('.button_edit-profile');
+const exitButton = document.querySelector('.button_exit-popup');
+const popupForm = document.querySelector('.popup__form')
+const popup = document.querySelector('.popup');
+const profileName = document.querySelector('.profile__title');
+const profileSubtitle = document.querySelector('.profile__subtitle');
+const popupName = document.querySelector('.popup__name');
+const popupSubtitle = document.querySelector('.popup__subtitle');
+const likeButton = document.querySelector('.button_like')
 
-function popupOpened(){
-/*вставить класс переключатель попапа*/popup.classList.add('popup_opened');
-popupName.value=profileName.innerText;
-popupSubtitle.value=profileSubtitle.innerText;
+function openedPopup() {
+  popupName.value = profileName.textContent;
+  popupSubtitle.value = profileSubtitle.textContent;
+  popup.classList.add('popup_opened');
 }
 
-function popupExit(){
-popup.classList.remove('popup_opened');
+function closePopup() {
+  popup.classList.remove('popup_opened');
 }
 
-function popupSubmit(evt){
-evt.preventDefault();
-profileName.textContent=popupName.value;
-profileSubtitle.textContent=popupSubtitle.value;
-popupExit();
+function submitFormPopup(evt) {
+  evt.preventDefault();
+  profileName.textContent = popupName.value;
+  profileSubtitle.textContent = popupSubtitle.value;
+  closePopup();
 }
 
-function likeButtonToggle(){
-  likeButton.classList.toggle('place__like-button_active')
-}
-
-editButton.addEventListener('click',popupOpened);
-exitButton.addEventListener('click',popupExit);
-popupForm.addEventListener('submit',popupSubmit)
-likeButton.addEventListener('click',likeButtonToggle);
+editButton.addEventListener('click', openedPopup);
+exitButton.addEventListener('click', closePopup);
+popupForm.addEventListener('submit', submitFormPopup)

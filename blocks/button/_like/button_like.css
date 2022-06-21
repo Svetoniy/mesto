@@ -1,10 +1,11 @@
-.place__like-button{
+.button_like{
   background-image: url(../../../images/place/__like-button/like.svg);
+  background-color: transparent;
   width: 22px;
   height: 19px;
   border: 0;
 }
 
-.place__like-button:hover{
+.button_like:hover{
   opacity: .5;
 }
