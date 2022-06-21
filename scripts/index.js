@@ -1,12 +1,12 @@
-const editButton = document.querySelector('.button_edit-profile');
-const exitButton = document.querySelector('.button_exit-popup');
+const editButton = document.querySelector('.button_type_edit');
+const exitButton = document.querySelector('.button_type_exit');
 const popupForm = document.querySelector('.popup__form')
 const popup = document.querySelector('.popup');
 const profileName = document.querySelector('.profile__title');
 const profileSubtitle = document.querySelector('.profile__subtitle');
-const popupName = document.querySelector('.popup__name');
-const popupSubtitle = document.querySelector('.popup__subtitle');
-const likeButton = document.querySelector('.button_like')
+const popupName = document.querySelector('.popup_input-name');
+const popupSubtitle = document.querySelector('.popup_input-subtitle');
+const likeButton = document.querySelector('.button_type_like')
 
 function openedPopup() {
   popupName.value = profileName.textContent;

@@ -1,5 +1,5 @@
-.button_exit-popup{
-  background-image: url(../../../images/popup/Close\ Icon.svg);
+.button_type_exit{
+  background-image: url(../../../../images/popup/Close\ Icon.svg);
   width: 32px;
   height: 32px;
   border: none;
@@ -11,9 +11,10 @@
 }
 
 @media screen and (max-width: 550px) {
-  .button_exit-popup {
+  .button_type_exit {
     margin:-40px 0 0;
     width: 20px;
     height: 20px;
+    background-size: 20px 20px;
   }
 }
