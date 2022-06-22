@@ -4,9 +4,8 @@ const popupForm = document.querySelector('.popup__form')
 const popup = document.querySelector('.popup');
 const profileName = document.querySelector('.profile__title');
 const profileSubtitle = document.querySelector('.profile__subtitle');
-const popupName = document.querySelector('.popup__input_name');
-const popupSubtitle = document.querySelector('.popup__input_subtitle');
-const likeButton = document.querySelector('.button_type_like')
+const popupName = document.querySelector('.popup__input_type_name');
+const popupSubtitle = document.querySelector('.popup__input_type_subtitle');
 
 function openedPopup() {
   popupName.value = profileName.textContent;
@@ -27,4 +26,4 @@ function submitFormPopup(evt) {
 
 editButton.addEventListener('click', openedPopup);
 exitButton.addEventListener('click', closePopup);
-popupForm.addEventListener('submit', submitFormPopup)
+popupForm.addEventListener('submit', submitFormPopup);
