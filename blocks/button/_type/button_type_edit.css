@@ -1,7 +1,7 @@
 .button_type_edit{
     width: 24px;
     height: 24px;
-    background-image: url(../../../../images/profile/edit.svg);
+    background-image: url(../../../images/profile/edit.svg);
     background-size: 10px 10px;
 }
 
