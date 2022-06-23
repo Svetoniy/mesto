@@ -27,53 +27,7 @@
 
       <section class="cardplace">
         <ul class="places">
-          <li class="place">
-            <img class="place__image" src="./images/place/kirill-pershin-1088404-unsplash.jpg" alt="Красоты карачевска">
-            <div class="place__group">
-              <h2 class="place__name">Карачаевск</h2>
-              <button class="button button_type_like" type="button"></button>
-            </div>
-          </li>
 
-          <li class="place">
-            <img class="place__image" src="./images/place/altay.jpg" alt="Алтай">
-            <div class="place__group">
-              <h2 class="place__name">Алтай</h2>
-              <button class="button button_type_like" type="button"></button>
-            </div>
-          </li>
-
-          <li class="place">
-            <img class="place__image" src="./images/place/dombai.jpg" alt="Домбай">
-            <div class="place__group">
-              <h2 class="place__name">Домбай</h2>
-              <button class="button button_type_like" type="button"></button>
-            </div>
-          </li>
-
-          <li class="place">
-            <img class="place__image" src="./images/place/elbrus.jpg" alt="Ельбрус">
-            <div class="place__group">
-              <h2 class="place__name">Ельбрус</h2>
-              <button class="button button_type_like" type="button"></button>
-            </div>
-          </li>
-
-          <li class="place">
-            <img class="place__image" src="./images/place/lena.jpg" alt="р.Лена">
-            <div class="place__group">
-              <h2 class="place__name">р. Лена</h2>
-              <button class="button button_type_like" type="button"></button>
-            </div>
-          </li>
-
-          <li class="place">
-            <img class="place__image" src="./images/place/seliger.jpg" alt="Селигер">
-            <div class="place__group">
-              <h2 class="place__name">Селигер</h2>
-              <button class="button button_type_like" type="button"></button>
-            </div>
-          </li>
         </ul>
       </section>
     </main>
@@ -82,17 +36,39 @@
       <p class="footer__copyright">&copy;2022 Mesto Russia </p>
     </footer>
 
-    <div class="popup">
+    <div class="popup popup_type_edit">
       <div class="popup__container">
         <button class="button button_type_exit" type="button" aria-label="закрыть фоому"></button>
         <h2 class="popup__title">Редактировать профиль</h2>
-        <form class="popup__form" name="popupForm">
+        <form class="popup__form popup__form_type_edit" name="popupFormEdit">
           <input type="text" class="popup__input popup__input_type_name" name="popupFormName" placeholder="Введите Ваше имя" required >
           <input type="text" class="popup__input popup__input_type_subtitle" name="popupFormSubtitle" placeholder="Введите описание" required >
           <button class="button button_type_save" type="submit">Сохранить</button>
         </form>
       </div>
     </div>
+
+    <div class="popup popup_type_add">
+      <div class="popup__container">
+        <button class="button button_type_exit" type="button" aria-label="закрыть фоому"></button>
+        <h2 class="popup__title popup__form_type_add">Новое место</h2>
+        <form class="popup__form" name="popupFormAdd">
+          <input type="text" class="popup__input popup__input_type_place" name="popupFormPlace" placeholder="Название" required >
+          <input type="text" class="popup__input popup__input_type_place-url" name="popupFormPlaceUrl" placeholder="Ссылка на фотографию места " required >
+          <button class="button button_type_save" type="submit">Сохранить</button>
+        </form>
+      </div>
+    </div>
+
+    <template id="place-template">
+      <li class="place">
+        <img class="place__image" src="" alt="">
+        <div class="place__group">
+          <h2 class="place__name"></h2>
+          <button class="button button_type_like" type="button"></button>
+        </div>
+      </li>
+    </template>
 
   </div>
 <script src="./scripts/index.js"></script>
