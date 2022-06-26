@@ -38,31 +38,40 @@
 
     <div class="popup popup_type_edit">
       <div class="popup__container">
-        <button class="button button_type_exit" type="button" aria-label="закрыть фоому"></button>
+        <button class="button button_type_exit button_type_exit-edit" type="button" aria-label="закрыть фоому"></button>
         <h2 class="popup__title">Редактировать профиль</h2>
         <form class="popup__form popup__form_type_edit" name="popupFormEdit">
           <input type="text" class="popup__input popup__input_type_name" name="popupFormName" placeholder="Введите Ваше имя" required >
           <input type="text" class="popup__input popup__input_type_subtitle" name="popupFormSubtitle" placeholder="Введите описание" required >
-          <button class="button button_type_save" type="submit">Сохранить</button>
+          <button class="button button_type_save button_type_save-edit" type="submit">Сохранить</button>
         </form>
       </div>
     </div>
 
     <div class="popup popup_type_add">
       <div class="popup__container">
-        <button class="button button_type_exit" type="button" aria-label="закрыть фоому"></button>
-        <h2 class="popup__title popup__form_type_add">Новое место</h2>
-        <form class="popup__form" name="popupFormAdd">
+        <button class="button button_type_exit button_type_exit-add" type="button" aria-label="закрыть фоому"></button>
+        <h2 class="popup__title">Новое место</h2>
+        <form class="popup__form popup__form_type_add" name="popupFormAdd">
           <input type="text" class="popup__input popup__input_type_place" name="popupFormPlace" placeholder="Название" required >
           <input type="text" class="popup__input popup__input_type_place-url" name="popupFormPlaceUrl" placeholder="Ссылка на фотографию места " required >
-          <button class="button button_type_save" type="submit">Сохранить</button>
+          <button class="button button_type_save button_type_save-add" type="submit">Сохранить</button>
         </form>
+      </div>
+    </div>
+
+    <div class="popup popup_type_view">
+      <div class="popup__container popup__container_type_view">
+        <button class="button button_type_exit button_type_exit-view" type="button" aria-label="закрыть фоому"></button>
+        <img src="" alt="" class="popup__image">
+        <p class="popup__alt"></p>
       </div>
     </div>
 
     <template id="place-template">
       <li class="place">
-        <img class="place__image" src="" alt="">
+        <img class="place__image" src="#" alt="">
+        <button class="button button_type_trash" type="button"></button>
         <div class="place__group">
           <h2 class="place__name"></h2>
           <button class="button button_type_like" type="button"></button>

@@ -1,0 +1,11 @@
+.button_type_trash{
+  background-image: url(../../../images/place/Trash.svg);
+  background-color: transparent;
+  width: 18px;
+  height: 19px;
+  border: 0;
+  position:absolute;
+  top: 20px;
+  right: 20px;
+
+}
