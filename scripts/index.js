@@ -106,12 +106,11 @@ function closePopup(popup) {
 /* prerender block */
 function preRender() {
   initialCards.slice().reverse().forEach(CreatePlaceItem);
-  exitButtons.forEach(function (button){button.addEventListener('click',closePopup)})
+  exitButtons.forEach(function (button) { button.addEventListener('click', closePopup) })
   editButton.addEventListener('click', openedPopupEdit);
   popupEdit.addEventListener('submit', submitFormPopupEdit);
   saveAddButton.addEventListener('click', saveAddForm)
   addButton.addEventListener('click', openedPopupAdd);
 }
-
 
 preRender();
