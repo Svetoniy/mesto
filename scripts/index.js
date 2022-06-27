@@ -93,7 +93,7 @@ function saveAddForm(evt) {
     link: popupPlaceUrl.value
   }
   createPlaceItem(placeItem);
-  evt.target.reset()
+  evt.target.reset();
   closePopup(popupAdd);
 }
 
