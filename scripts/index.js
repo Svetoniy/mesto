@@ -1,7 +1,7 @@
 const editButton = document.querySelector('.button_type_edit');
 const profileName = document.querySelector('.profile__title');
 const profileSubtitle = document.querySelector('.profile__subtitle');
-const popupEdit=document.querySelector('.popup_type_edit');
+const popupEdit = document.querySelector('.popup_type_edit');
 const submitPopupEdit = document.querySelector('.popup__form_type_edit');
 const popupName = document.querySelector('.popup__input_type_name');
 const popupSubtitle = document.querySelector('.popup__input_type_subtitle');
@@ -127,9 +127,9 @@ function preRender() {
   submitPopupEdit.addEventListener('submit', submitFormPopupEdit);
   submitPopupAdd.addEventListener('submit', saveAddForm);
   addButton.addEventListener('click', () => openPopup(popupAdd));
-  exitButtons.forEach((button) =>{
-    const popup=button.closest('.popup');
-    button.addEventListener('click',()=> closePopup(popup));
+  exitButtons.forEach((button) => {
+    const popup = button.closest('.popup');
+    button.addEventListener('click', () => closePopup(popup));
   });
 }
 
