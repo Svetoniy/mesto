@@ -43,12 +43,12 @@
         <button class="button button_type_exit button_type_exit-edit" type="button" aria-label="закрыть фоому"></button>
         <h2 class="popup__title">Редактировать профиль</h2>
         <form class="popup__form popup__form_type_edit" name="popupFormEdit" novalidate>
-          <input type="text" class="popup__input popup__input_type_name" id="popup__input_type_name" name="popupFormName"
+          <input type="text" class="popup__input popup__input_type_name" id="type_name" name="popupFormName"
             placeholder="Введите Ваше имя" required minlength="2" maxlength="40">
-            <span class="popup__placeholder popup__input_type_name-error"></span>
-          <input type="text" class="popup__input popup__input_type_subtitle" id="popup__input_type_subtitle" name="popupFormSubtitle"
+            <span class="popup__placeholder type_name-error"></span>
+          <input type="text" class="popup__input popup__input_type_subtitle" id="type_subtitle" name="popupFormSubtitle"
             placeholder="Введите описание" required minlength="2" maxlength="200">
-            <span class="popup__placeholder popup__input_type_subtitle-error"></span>
+            <span class="popup__placeholder type_subtitle-error"></span>
           <button class="button button_type_save button_type_save-edit popup__button" type="submit">Сохранить</button>
         </form>
       </div>
@@ -59,12 +59,12 @@
         <button class="button button_type_exit button_type_exit-add" type="button" aria-label="закрыть фоому"></button>
         <h2 class="popup__title">Новое место</h2>
         <form class="popup__form popup__form_type_add" name="popupFormAdd" novalidate>
-          <input type="text" class="popup__input popup__input_type_place" id="popup__input_type_place" name="popupFormPlace" placeholder="Название"
+          <input type="text" class="popup__input popup__input_type_place" id="type_place" name="popupFormPlace" placeholder="Название"
             required  minlength="2" maxlength="30">
-            <span class="popup__placeholder popup__input_type_place-error"></span>
-          <input type="url" class="popup__input popup__input_type_place-url" id="popup__input_type_place-url" name="popupFormPlaceUrl"
+            <span class="popup__placeholder type_place-error"></span>
+          <input type="url" class="popup__input popup__input_type_place-url" id="type_place-url" name="popupFormPlaceUrl"
             placeholder="Ссылка на фотографию места" required>
-            <span class="popup__placeholder popup__input_type_place-url-error"></span>
+            <span class="popup__placeholder type_place-url-error"></span>
           <button class="button button_type_save button_type_save-add popup__button" type="submit" disabled="true">Создать</button>
         </form>
       </div>
