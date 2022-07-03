@@ -2,7 +2,7 @@
 function objectValidate(classValidate) {
   const formList = Array.from(document.querySelectorAll(classValidate.formSelector));
   formList.forEach((popupForm) => {
-    noValidateForm(popupForm);
+    preventDefaultAction(popupForm);
     setEventListeners(classValidate, popupForm);
   });
 }
@@ -10,7 +10,7 @@ function objectValidate(classValidate) {
 function setEventListeners(classValidate, popupForm) {
   const inputList = Array.from(popupForm.querySelectorAll(classValidate.inputSelector));
   const buttonElement = popupForm.querySelector(classValidate.submitButtonSelector);
-  toggleButtonState(classValidate.inactiveButtonClass, buttonElement, inputList);
+  //toggleButtonState(classValidate.inactiveButtonClass, buttonElement, inputList);
   inputList.forEach((inputElement) => {
     inputElement.addEventListener('input', function () {
       checkInputValidity(classValidate, popupForm, inputElement);
@@ -57,7 +57,7 @@ function hasInvalidInput(inputList) {
   });
 }
 
-function noValidateForm(popupForm) {
+function preventDefaultAction(popupForm) {
   popupForm.addEventListener('submit', function (evt) {
     evt.preventDefault();
   });
