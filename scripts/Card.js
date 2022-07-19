@@ -1,10 +1,9 @@
-import {openedPopupView} from './index.js';
-
 class Card {
-  constructor(placeItem, cardSelector) {
+  constructor(placeItem, cardSelector, openedPopupView) {
     this._name = placeItem.name;
     this._link = placeItem.link;
     this._cardSelector = cardSelector;
+    this._handleCardClick=openedPopupView
   }
   //#place-template
   _getTemplate() {
@@ -39,7 +38,7 @@ class Card {
       this._deletePlaceItem();
     });
     this._placeImage.addEventListener('click', () => {
-      this._openPopup();
+      this._handleCardClick(this._link,this._name);
     });
   }
 
@@ -50,11 +49,6 @@ class Card {
   _deletePlaceItem() {
     this._element.remove();
   }
-
-  _openPopup(){
-    openedPopupView(this._link,this._name);
-  }
-
 }
 
 export { Card };

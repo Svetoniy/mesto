@@ -48,7 +48,7 @@ const initialCards = [
   }
 ];
 
-const classValidate = {
+const config = {
   formSelector: '.popup__form',
   inputSelector: '.popup__input',
   submitButtonSelector: '.popup__button',
@@ -56,7 +56,7 @@ const classValidate = {
   inputErrorClass: 'popup__input_type_error',
   errorClass: 'popup__error_visible'
 };
-
+const formValidators = {};
 
 
 /* popup Edit block */ //
@@ -81,22 +81,23 @@ function createPlaceItem(placeItem) {
 
 /*create Place*/
 function createCard(placeItem) {
-  const card = new Card(placeItem, cardSelector,openedPopupView);
+  const card = new Card(placeItem, cardSelector, openedPopupView);
   const place = card.generateCard();
   return place;
 }
 /*validate*/
-function startValidate(classValidate) {
-  const formList = Array.from(document.querySelectorAll(classValidate.formSelector));
+const startValidation = (config) => {
+  const formList = Array.from(document.querySelectorAll(config.formSelector));
   formList.forEach((popupForm) => {
-    const validate = new FormValidator(classValidate, popupForm);
+    const validate = new FormValidator(config, popupForm);
+    const popupName=popupForm.getAttribute('name');
+    formValidators[popupName]=validate;
     validate.enableValidation();
   });
 }
 
 function saveAddForm(evt) {
   evt.preventDefault();
-  const buttonElement = popupAdd.querySelector('.button_type_save');
   const placeItem = {
     name: popupPlace.value,
     link: popupPlaceUrl.value
@@ -104,17 +105,12 @@ function saveAddForm(evt) {
   createPlaceItem(placeItem);
   evt.target.reset();
   closePopup(popupAdd);
-  deactivateButton(buttonElement);
-}
-
-function deactivateButton(buttonElement) {
-  buttonElement.classList.add('popup__button_disabled');
-  buttonElement.setAttribute('disabled', true);
+  formValidators.popupFormAdd.toggleButtonState();
 }
 
 /* view block */
 
-function openedPopupView(link,name) {
+function openedPopupView(link, name) {
   img.src = link;
   img.alt = name;
   alt.textContent = name;
@@ -167,6 +163,5 @@ function checkEvent(evt) {
 }
 
 preRender();
-startValidate(classValidate);
+startValidation(config);
 
-export {openedPopupView};

@@ -16,6 +16,10 @@ class FormValidator {
     this._setEventListeners();
   }
 
+  toggleButtonState() {
+    this._toggleButtonState();
+  }
+
   _preventDefaultAction() {
     this._popupForm.addEventListener('submit', function (evt) {
       evt.preventDefault();
@@ -25,7 +29,7 @@ class FormValidator {
   _setEventListeners() {
     this._inputList.forEach((inputElement) => {
       inputElement.addEventListener('input', () => {
-        this._inputElement=inputElement;
+        this._inputElement = inputElement;
         this._checkInputValidity();
         this._toggleButtonState();
       });
